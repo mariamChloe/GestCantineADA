@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dish List</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+</head>
+<body>
+<h1>Mon Plat</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Summary</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Thymeleaf syntax to iterate over the plat items -->
+    <tr th:each="plat : ${plat}">
+        <td th:text="${plat.name}">Name</td>
+        <td th:text="${plat.summary}">Summary</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

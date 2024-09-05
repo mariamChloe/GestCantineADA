@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Canteen Menu</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+</head>
+<body>
+<h1>Canteen Menu</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Creation Date</th>
+        <th>Name</th>
+        <th>Summary</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Thymeleaf syntax to iterate over the menu items -->
+    <tr th:each="menu : ${menus}">
+        <td th:text="${menu.id}">ID</td>
+        <td th:text="${menu.creationDate}">Creation Date</td>
+        <td>
+            <!-- Generate dynamic URL with menu ID -->
+            <a th:href="@{/plat/{id}(id=${menu.id})}" th:text="${menu.name}">Name</a>
+
+        </td>
+        <td th:text="${menu.summary}">Summary</td>
+    </tr>
+    <!-- Static menu items for demonstration -->
+    <tr>
+        <td>1</td>
+        <td>2024-09-05T12:00:00Z</td>
+        <td>
+            <a href="/plat/1">Spaghetti</a>
+        </td>
+        <td>Spaghetti</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>2024-09-05T12:00:00Z</td>
+        <td>
+            <a href="/plat/2">Garba</a>
+        </td>
+        <td>Garba Show</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>2024-09-05T12:00:00Z</td>
+        <td>
+            <a href="/plat/3">Poisson Braise</a>
+        </td>
+        <td>Poisson Carp</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

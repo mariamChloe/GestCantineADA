@@ -1,0 +1,52 @@
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Style for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+/* Style for the table header */
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style for the table rows on hover */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Style for the table header cells */
+th {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+}
+
+/* Style for the table cells */
+td {
+    text-align: center;
+}
+
+/* Style for the heading */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
